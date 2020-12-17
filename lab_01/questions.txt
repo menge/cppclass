@@ -1,0 +1,147 @@
+================================================================================
+INTRODUCTION TO THE PSEUDO RANDOM NUMBER GENERATOR
+INTRODUCTION TO PROBABILITY AND STATISTICS
+================================================================================
+
+This is very much like a lab, but is walked through via these questions. These
+questions should be done in order to point out how things are working in the
+code. I want to try this as a different way of teaching and see how you guys
+like it. Since we will not be holding class the next week, I expect this to
+take between 6-12 hours to complete. Please note the time of when you are
+working on each question, and in your answers to these questions, provide the
+time of when you started and finished each question. I understnd that there are
+a lot of questions, and that you may not be able to finish them all, but having
+the times would help me understand where everyone is and where people are
+struggling at.
+
+There are Bonus questions also here, that I wanted to probe your mind in terms
+of thinking about things outside of normal behavior. I don't expect an answer
+to these questions, but just wanted get your minds thinking about it.
+
+================================================================================
+
+1. Exercise: run this through the debugger, and be able to understand
+   exactly which line will get executed next, and when to (s)tep 
+   or (n)ext if going into a function or not
+
+2. Question: if you step into a function that you didn't write, what
+   happens? Does it make sense to do so if you trust the third-party
+   implementation of their function that is exposed to you?
+
+3. Question: We included a new header <ctime>. what function are we
+   using that is provided by the <ctime> header?
+
+4. Question: We also are using two new functions srand(...) and
+   rand(). Which included header provides these functions?
+
+5. In the code, we have an instruction that states:
+
+        die1 = (rand() % DIE_SIDES) + 1;
+
+   where rand() is explained as:
+
+        // rand() is pseudo random number generator that returns a 
+        // 32 bit item where all the bits are randmoly set between
+        // 0 and 1
+
+   Given the instruction above, what are the potential values that
+   can be stored into die1?
+
+6. Question: explain the sizing of these arrays, and why they are
+   correct also, is there any wasted space here?  if so state
+   which items are never used
+
+    int sum_counts[(DIE_SIDES+1) * 2 - 1] = {0};
+    int pairs[(DIE_SIDES+1)] = {0};
+
+int pairs[7] = {0};
++------ +------ +------ +------ +------ +------ +------ 
+|   0 | |    1| |    0| |    0| |    0| |    0| |    2|
++------ +------ +------ +------ +------ +------ +------ 
+  0       1         2       3        4     5       6
+
+int pairs[7];
++------ +------ +------ +------ +------ +------ +------ 
+|XXXXX| |XXXXX| |XXXXX| |XXXXX| |XXXXX| |XXXXX| |XXXXX|
++------ +------ +------ +------ +------ +------ +------ 
+  0       1         2       3        4     5       6
+7. Exercise: Let's figure out how rand() works. Change the
+   following constants from:
+
+       const int LIMIT = 100000;
+       const bool PRINT_INDIVIDUAL_DICE_VALUES = false;
+
+   to:
+
+       const int LIMIT = 10;
+       const bool PRINT_INDIVIDUAL_DICE_VALUES = true;
+
+   and comment out the line (e.g. add a "//" in the front):
+
+       srand(current_time);
+
+   Now, run the program, and notice the values of the dice rolled.
+
+7a) Question: Do the numbers that are printed seem random to you?
+7b) Question: Rerun the program again and again, what do you
+    notice about the numbers being printed out? Is this desireable?
+
+8. Exercise: Now, let's seed the pseudo random number generator with
+   a constant value:
+
+       srand(1000);
+
+8a) Question: Now run the program again, and compare against the
+    results from 5a. Are the numbers different? Do they seem random?
+8b) Question: Now re-run the program multiple times. What do you
+    notice about the values being printed?
+8c) Question: Continue to change the value passed into srand. Note
+    how the randomness of the values printed and how the sequence
+    seems to be.
+
+9. Question: Let's figure out time(nullptr) works. Print the value
+   of the result stored in current_time. Run multiple times, and
+   explain what you are seeing.
+
+10. Question: Given what you know about how rand() works and how the
+    seed (srand(int)) produces values from rand(), explain why using
+    srand(current_time) is a good idea to generate random numbers.
+
+11. Bonus Question: Can you think of any reasons why you wouldn't
+    want to use the current time as a seed into the random number
+    generator (RNG)?
+
+12. Question: Explain what is contained in these print sections
+
+    std::cout << "Pairs:" << std::endl;
+    for (int i = 1; i <= DIE_SIDES; i++)
+    {
+        std::cout << "Pairs[" << i << "]: " << pairs[i] << std::endl;
+    }
+
+    std::cout << "Sums:" << std::endl;
+    for (int i = 2; i <= DIE_SIDES*2; i++)
+    {
+        std::cout << "Sums[" << i << "]: " << sum_counts[i] << std::endl;
+    }
+
+13. Question: Create a bar graph of the sum array on a piece of
+    graph paper. What sum value is most commonly rolled?
+
+14. Question: Change the DIE_SIDES constant to be 20. Again, create
+    a graph showing the results of the sum rolled dice. Which sum is
+    most common?
+
+15. Question: Going back to a 6-sided dice, what do you notice
+    about how many times each pairs are rolled?
+
+16. Question: If you want to get a result of about 100000 instances
+    of pairs across all of them, approximately how many rolls would
+    you need to do? (E.g. what would you need to set LIMIT to?)
+
+17. Bonus Exercise: Try adding a third die, and change pair counting
+    to include all three dice having the same value to be counted.
+    Also the sum logic will also need to be changed to represent
+    this new functionality. Furthermore, the sizing of the array
+    will need to be increased due to support the higher number
+    of sums.
