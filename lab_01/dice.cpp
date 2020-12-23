@@ -56,7 +56,7 @@ int main(int argc, char **argv)
     int dice[NUM_DICE];
 
     const int DIE_SIDES = 6;
-    const int LIMIT = 100000;
+    const int LIMIT = 1000;
     const bool PRINT_INDIVIDUAL_DICE_VALUES = false;
 
     // Hold the statistics of the number of times we see each
