@@ -1,0 +1,42 @@
+================================================================================
+VERSION CONTROL
+================================================================================
+
+* allow for users have a history of what has changed
+* allow concurrent usage of the codebase for many users
+
+* RCS (Revision Control System)
+** 1980s?
+** you get history
+** lock-based system (e.g. checkout and lock a file)
+*** pros
+**** nobody else can change it simultaneously
+***** will never run into conflicts
+*** cons
+**** nobody else can change it simultaneously
+***** only a single person can work on a file at the same time
+**** local - only
+
+* CVS (Concurrent Versions System)
+** Same idea as RCS, except, networked
+** Sysem is multi-user
+** Everyone has their own local copy of the repository
+** Server exists to hold copy of 'master'
+** Users checkout repo from master
+** Users makes changes
+** Users push changes back to the master
+** Users have only a snapshot of the codebase
+** if the master breaks, then all history is lost
+
+* subversion
+* basically CVS, but better
+* admin of the server is easier
+
+* clearcase
+** owned by IBM
+** instead of being file-based, it is view based
+
+* git
+** everything is local, but shareable
+** not centralized, but rather decentralized
+** views show a certain snap-shot, but entire history exists locally
