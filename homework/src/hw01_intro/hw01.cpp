@@ -44,7 +44,7 @@ double return_1p5()
 // Post-conditions: none
 // Returns: always returns value: PI
 // Notes: You can get access to the value of pi (3.1415926...) via the
-//        math.h/cmath header file. You can access it via the M_PI
+//        <math.h> or <cmath> header file. You can access it via the M_PI
 double return_pi()
 {
     return 0.0;
