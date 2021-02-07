@@ -7,3 +7,4 @@ googletest-build
 googletest-download
 googletest-src
 lib
+*.a
