@@ -1,1 +1,2 @@
 add_subdirectory(hw01_intro)
+add_subdirectory(hw02_basics)
