@@ -34,7 +34,7 @@ double area_of_square(double side)
 
 // Pre-conditions: base > 0, height > 0
 // Post-conditions: none
-// Returns: always returns value: -42
+// Returns: area of traingle, as calculated by 1/2 * base * height
 double area_of_triangle(double base, double height)
 {
     return 0.0;
