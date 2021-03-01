@@ -1,3 +1,4 @@
 add_subdirectory(hw01_intro)
 add_subdirectory(hw02_basics)
 add_subdirectory(hw03_conditionals)
+add_subdirectory(hw04_loops)
