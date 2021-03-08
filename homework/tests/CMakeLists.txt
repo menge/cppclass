@@ -3,11 +3,13 @@ set(SOURCE_FILES driver.cpp
                  tests_hw02.cpp
                  tests_hw03.cpp
                  tests_hw04.cpp
+                 tests_hw05.cpp
    )
 set(HW_LIBS hw01
             hw02
             hw03
             hw04
+            hw05
    )
 
 add_executable(test_homework ${SOURCE_FILES})
