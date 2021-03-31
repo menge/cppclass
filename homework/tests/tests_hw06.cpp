@@ -59,7 +59,8 @@ TEST(HW06, STRCPY) {
         char buf0[8192];
         char buf1[8192];
 
-        EXPECT_EQ(cppclass::strcpy(buf0, test), strcpy(buf1, test));
+        EXPECT_EQ(cppclass::strcpy(buf0, test), buf0);
+        EXPECT_EQ(strcpy(buf1, test), buf1);
 
         EXPECT_EQ(std::string(buf0), std::string(buf1));
     }
@@ -147,6 +148,8 @@ TEST(HW06, UPPER) {
     UpperTestType tests[] = {
         {"a", "A"},
         {"A", "A"},
+        {"z", "Z"},
+        {"Z", "Z"},
         {"hello", "HELLO"},
         {"hello bar", "HELLO BAR"},
         {"upper", "UPPER"},
@@ -175,6 +178,8 @@ TEST(HW06, LOWER) {
     LowerTestType tests[] = {
         {"a", "a"},
         {"A", "a"},
+        {"z", "z"},
+        {"Z", "z"},
         {"HELLO", "hello"},
         {"HELLO BAR", "hello bar"},
         {"lower", "lower"},
