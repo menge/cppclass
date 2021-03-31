@@ -23,7 +23,7 @@ size_t cppclass::strlen(const char *str)
 //                   returns pointer to 3rd element of string
 //          Example: str = "asdf", c = 'g',
 //                   returns nullptr
-char * cppclass::strchr(const char *str, char c)
+const char * cppclass::strchr(const char *str, char c)
 {
     return nullptr;
 }

@@ -24,7 +24,7 @@ namespace cppclass
     //                   returns pointer to 3rd element of string
     //          Example: str = "asdf", c = 'g',
     //                   returns nullptr
-    char * strchr(const char *str, char c);
+    const char * strchr(const char *str, char c);
 
     // Pre-conditions: The strings may not overlap, and the destination
     //                 string dest must be large enough to receive the
