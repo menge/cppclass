@@ -1,0 +1,20 @@
++=========================================+
+| Hello World\02000\0                     |
++=========================================+
+0xffffabcd <- const char *
+foo == 0xffffabcd                    ^
+                                     |
+                                     |
+FishTank waterWaster                 |
++-----------------+                  |
+|0xffffabcd       | const char *name +
+|50               | float capacity
+|1                | int numFish
++-----------------+
+
+FishTankV2 newWaterWaster
++-----------------+
+|Water Waster 2000\0............................| char name[40]
+|50               | int capacity
+|1                | int numFish
++-----------------+
