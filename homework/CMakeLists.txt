@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)  # CMake version check
 project(cppclass_homework)            # Project name
-set(CMAKE_CXX_STANDARD 17)            # Enable c++17 standard
+set(CMAKE_CXX_STANDARD 20)            # Enable c++20 standard
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # allow YCM to find build database
 set(CMAKE_BUILD_TYPE DEBUG)           # allow for debug symbols to be built
 
