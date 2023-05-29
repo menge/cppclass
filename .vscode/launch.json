@@ -7,7 +7,7 @@
         "name": "(gdb) Launch",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/homework/tests/test_homework",
+        "program": "${workspaceFolder}/build/tests/test_homework",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${fileDirname}",
