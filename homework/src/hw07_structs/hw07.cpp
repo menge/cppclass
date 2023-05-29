@@ -1,6 +1,7 @@
 #include "hw07.h"
 
 #include <algorithm>
+#include <stdexcept>
 
 namespace cppclass
 {
