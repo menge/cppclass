@@ -1,0 +1,81 @@
+* Files
+** entities in a computer and they have a name: foo.txt
+** they also have content
+** usually files have an extention
+*** .txt -- text files
+*** .exe -- executable files (often exists on windows OS, but doesn't exist in linux)
+*** .sh  -- shell executable
+*** .java -- java program
+*** .cpp -- c++ program
+*** .cxx -- c++ program
+*** .h   -- c/c++ header file
+*** .o   -- object file
+
+Directory Heirarchy
+* Example:
+** Academic Career
+** 1st grade
+*** Subjects
+**** Core Subjects
+***** Math
+****** Addition
+****** Subtraction
+****** Multiplication
+***** Language Arts
+***** Social Studies
+**** Specials
+***** Music
+***** PE
+***** Art
+** 2nd grade
+** 3rd grade
+
+* Common programs/tools that we will use
+ls - list files inside a directory
+  ls -l
+cd - change current working directory (used for directory traversal)
+  cd foo  -- change directory into foo
+  cd ..  -- change directory into parent
+cat - concatenate files
+  cat lecture.txt -- output the contents of lecture.txt to stdout
+mkdir - make a directory
+rmdir - remove a directory
+rm - remove a file
+
+**********
+Editor - vim
+**********
+* purpose of an editor - allow for editing (adding/deleting/rearrnanging) of a file
+* Most editors are WYSIWYG
+** WYSIWYG - What You See Is What You Get
+** examples: nano, pico, emacs
+** non-examples: vim
+* Vim: multi-moded editor
+** insert mode
+*** from normal mode: press i -- insert at cursor
+*** from normal mode: press a -- append at cursor
+*** from normal mode: press I -- insert at beginning of line
+*** from normal mode: press A -- append at end of line
+*** from normal mode: press C -- change (delete from cursor to end of line and put in insert mode)
+*** from normal mode: press o -- add a line below cursor and put in insert mode
+*** from normal mode: press O -- add a line above cursor and put in insert mode
+** normal mode
+*** from insert mode: press <ESC>
+*** :w - write buffer to disk
+*** :q - quit vim
+*** :wq - write buffer to disk and quit
+*** :x - write buffer to disk and quit
+* gave example of why we use vim
+
+**********
+helloworld
+**********
+* including libraries
+* main function
+* std::cout, std::endl
+* return EXIT_SUCCESS
+
+* how to compile
+** g++ - gnu compiler
+** g++ filename.cpp
+*** an output file called a.out will be created (the actual executable)
