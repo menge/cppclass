@@ -1,0 +1,4 @@
+GCC:
+* options that are useful
+** -Wall -- print all warnings
+** -o <executable name> -- create an executable with the name given
