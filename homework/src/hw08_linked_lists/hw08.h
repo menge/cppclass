@@ -14,11 +14,11 @@ public:
                 Node() : data(), next(nullptr), prev(nullptr) {}
         };
 
-        /// @brief Default constructor.
+        /// @brief Constructs an empty linked list.
         LinkedList();
 
         /**
-         * @brief Parameterized constructor.
+         * @brief Constructs a linked list from an array.
          *
          * @param arr Pointer to the array.
          * @param size Number of elements in the array.
@@ -28,14 +28,14 @@ public:
         /**
          * @brief Copy constructor.
          *
-         * @param src Reference to the LinkedList to copy from.
+         * @param src Reference to the linked list to copy from.
          */
         LinkedList(const LinkedList &src);
 
         /**
          * @brief Move constructor.
          *
-         * @param src R-value reference to the LinkedList to move from.
+         * @param src R-value reference to the linked list to move from.
          */
         LinkedList(LinkedList &&src);
 
@@ -45,64 +45,56 @@ public:
         ~LinkedList();
 
         /**
-         * @brief Destroy an element from the linked list.
+         * @brief Remove an element from the linked list.
          *
-         * @param node Pointer to a node (node has to be valid within this linked list)
-         *             does nothing if nullptr is passed in.
+         * @param node Pointer to a valid node in this list. If nullptr, does nothing.
          */
         void erase(Node *node);
 
         /**
-         * @brief Create an item to the end of the linked list.
+         * @brief Appends a new node after the specified node.
          *
-         * @param data The data to add to the linked list.
-         * @param node Pointer to the node inserting after (node has to be valid within this linked list)
-         *             if node = nullptr, append at end.
+         * @param data Data to store in the new node.
+         * @param node Pointer to a valid node in the list to append after. If nullptr, appends at end.
          *
-         * @return A pointer to the node that was created.
+         * @return Pointer to the newly created node.
          */
         Node* append(int data, Node *node = nullptr);
 
         /**
-         * @brief Create an item before a specific node.
-         *
-         * @param data The data to add to the linked list.
-         * @param node Pointer to the node inserting before (node has to be valid within this linked list)
-         *             if node = nullptr, insert at beginning
-         *
-         * @return A pointer to the node that was created.
-         */
+          * @brief Inserts a new node before the specified node.
+          *
+          * @param data Data to store in the new node.
+          * @param node Pointer to a valid node in the list to insert before. If nullptr, inserts at the beginning.
+          * @return Pointer to the newly created node.
+          */
         Node* insert(int data, Node *node = nullptr);
 
         /**
-         * @brief Searches for node with @p data.
+         * @brief Searches for the first node containing @p data.
          *
-         * @param data The data to search for.
-         *
-         * @return A pointer to the first node found with @p data
-         *         if not found return nullptr.
+         * @param data Data to search for in the list.
+         * @return Pointer to the first node found with @p data. If not found, returns nullptr.
          */
         Node* search(int data) const;
 
         /**
-         * @brief Accesses element at position @p index.
+         * @brief Accesses element at the given index.
          *
-         * @param index The index of an item.
-         *
-         * @return A pointer to the node
-         *         return nullptr if index is out of bounds.
+         * @param index Zero-based index of a node.
+         * @return Pointer to the node. If index is out of bounds, returns nullptr.
          */
         Node* at(unsigned int index) const;
 
         /**
-         * @brief Returns size of linked list.
+         * @brief Returns number of nodes in the list.
          *
-         * @return Size of linked list.
+         * @return Current size of list.
          */
         size_t get_size() const;
 
 private:
-        Node *m_head;
-        Node *m_tail;
-        size_t m_size;
+        Node *m_head; ///< Pointer to the first node.
+        Node *m_tail; ///< Pointer to the last node.
+        size_t m_size; ///< Number of elements in the list.
 };
