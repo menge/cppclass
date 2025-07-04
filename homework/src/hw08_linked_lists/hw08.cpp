@@ -100,6 +100,6 @@ LinkedList::Node* LinkedList::at(unsigned int index) const {
  *
  * @return Current size of list.
  */
-size_t LinkedList::get_size() const { 
+size_t LinkedList::get_size() const {
         return 0;
 }
