@@ -3,6 +3,7 @@
 
 #include "hw08.h"
 
+namespace cppclass{
 /// @brief Constructs an empty linked list.
 LinkedList::LinkedList() {
 
@@ -61,7 +62,7 @@ void LinkedList::erase(Node *node) {
  * @return Pointer to the newly created node.
  */
 LinkedList::Node* LinkedList::append(int data, Node *node) {
-        return nullptr;
+    return nullptr;
 }
 
 /**
@@ -72,7 +73,7 @@ LinkedList::Node* LinkedList::append(int data, Node *node) {
   * @return Pointer to the newly created node.
   */
 LinkedList::Node* LinkedList::insert(int data, Node *node) {
-        return nullptr;
+    return nullptr;
 }
 
 /**
@@ -82,7 +83,7 @@ LinkedList::Node* LinkedList::insert(int data, Node *node) {
  * @return Pointer to the first node found with @p data. If not found, returns nullptr.
  */
 LinkedList::Node* LinkedList::search(int data) const {
-        return nullptr;
+    return nullptr;
 }
 
 /**
@@ -92,7 +93,7 @@ LinkedList::Node* LinkedList::search(int data) const {
  * @return Pointer to the node. If index is out of bounds, returns nullptr.
  */
 LinkedList::Node* LinkedList::at(unsigned int index) const {
-        return nullptr;
+    return nullptr;
 }
 
 /**
@@ -101,5 +102,23 @@ LinkedList::Node* LinkedList::at(unsigned int index) const {
  * @return Current size of list.
  */
 size_t LinkedList::get_size() const {
-        return 0;
+    return 0;
+}
+/**
+ * @brief Returns equality between two linked lists
+ *
+ * @return true if all elements in linked list are equal to each other in order and value
+ */
+bool LinkedList::operator==(const LinkedList &other) const {
+    return false;
+}
+
+/**
+ * @brief Returns non-equality between two linked lists
+ *
+ * @return false if all elements in linked list are equal to each other in order and value
+ */
+bool LinkedList::operator!=(const LinkedList &other) const {
+    return false;
+}
 }

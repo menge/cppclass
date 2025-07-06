@@ -28,6 +28,11 @@ double interest(double amount, double years, double interest_rate)
 			  << std::endl;
 
 		base_cost = total;
+                {
+                        i = 100;
+                        std::cout << i << std::endl;
+                }
+                std::cout << i << std::endl;
 	}
 	return base_cost;
 }

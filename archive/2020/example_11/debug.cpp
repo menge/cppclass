@@ -1,6 +1,9 @@
-#include <cassert>
-#include <cstdlib>
 #include <iostream>
+#include <vector>
+#include <map>
+#include <assert.h>
+#include <stdlib.h>
+#include <math.h>
 
 double discount(double base_price, int age, double discount_rate);
 double discount(double base_price, int age, double discount_rate)

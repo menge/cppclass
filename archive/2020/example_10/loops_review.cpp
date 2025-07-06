@@ -53,4 +53,17 @@ std::cout << std::setw(20) << "iteration number"
 		}
 	}
 
+        while (true)
+        {
+
+
+
+            // update
+        }
+
+        do
+        {
+            //loop
+        } while (cond);
+
 }

@@ -12,7 +12,9 @@ void printGrades(double *grades, int size)
     std::cout << "Grades are: ";
     for (int i = 0; i < size; i++)
     {
-        std::cout << grades[i] << ", ";
+        //std::cout << grades[i] << ", ";
+        //std::cout << *(grades + i) << ", ";
+        std::cout << *grades << ", ";
     }
     std::cout << std::endl;
 }
@@ -41,8 +43,8 @@ int main (int argc, char **argv)
         grades[8] = 80.3;
         grades[9] = -2.0;
     }
-    //double grades[] = {100.0, 100.0, 100.0/3.0, 55.0, 65.0, 75.0, 0.1, 7.2, 80.3};
-    float grades[] = {100.0, 100.0, 100.0/3.0, 55.0, 65.0, 10.0, 24e5, 17.0, M_PI, M_PI * 2};
+    double grades[] = {100.0, 100.0, 100.0/3.0, 55.0, 65.0, 75.0, 0.1, 7.2, 80.3};
+    //float grades[] = {100.0, 100.0, 100.0/3.0, 55.0, 65.0, 10.0, 24e5, 17.0, M_PI, M_PI * 2};
 
     std::cout << "Sizeof grades: " << sizeof(grades) << std::endl;
     std::cout << "Number of elements in grades: " << sizeof(grades)/sizeof(grades[0]) << std::endl;

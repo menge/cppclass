@@ -12,28 +12,45 @@ int atoi_practice(const char *num)
 
 int main (int argc, char **argv)
 {
+#if 0
     char str[] = "Hello";
     std::cout << str << std::endl;
 
     char *foo = str;
     std::cout << foo << std::endl;
+    std::cout << &foo << std::endl;
+    printf("%p\n", &foo);
+    printf("%p\n", foo);
+    printf("%s\n", foo);
+    std::cout << *foo << std::endl;
+    std::cout << foo[0] << std::endl;
+    std::cout << foo[1] << std::endl;
+    std::cout << *(foo+1) << std::endl;
 
-    foo++;
+    char *foo2 = foo;
+    //foo++;
+    //str++;
+    //(*foo2)++;
+    //foo2[0]++;
     std::cout << foo << std::endl;
+    std::cout << foo2 << std::endl;
 
-    foo[2] = 'p';
+    //foo[2] = 'p';
     std::cout << foo << std::endl;
 
     std::cout << str << std::endl;
+#endif
 
+#if 0
     char str2[] = "Alfred";
-    char str3[] = "Alfree";
+    //char str2[] = "AlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfredAlfred";
+    char str3[] = "Alfreg";
 
     char *bar = str2;
 
     //bool same = (str2 == str3); // false
     //bool same = (str2 == bar);  // true
-    int same = strcmp(str2, str3);
+    int same = strcmp(str3, str2);
     std::cout << same << std::endl;
 
     char *borf = str2;
@@ -46,10 +63,12 @@ int main (int argc, char **argv)
     {
         char foo[64];
         char *bar = foo;
-        strcpy(bar, str2);
+        strncpy(bar, str2, sizeof(foo));
 
         std::cout << bar << std::endl;
     }
+#endif
+#if 0
     {
         char foo[] = "David";
         char foo2[] = "Hello World!!";
@@ -63,6 +82,8 @@ int main (int argc, char **argv)
         foo2[5] = '-';
         std::cout << foo2 << std::endl;
     }
+#endif
+#if 0
     {
         char foo[] = "The Quick Brown Fox Jumped Over The Lazy Dogs";
         std::cout << foo << std::endl;
@@ -77,6 +98,7 @@ int main (int argc, char **argv)
         std::cout << len << std::endl;
         std::cout << sizeof(foo) << std::endl;
     }
+#endif
     {
         char animal1[] = "fira";
         char animal2[] = "fire";
@@ -104,10 +126,11 @@ int main (int argc, char **argv)
         !@#$%^&*()
 
         ASCII
-#endif
 
         std::cout << result << std::endl;
+#endif
     }
+#if 0
     {
         char foo[] = "Hello I am 27 years old";
 
@@ -141,4 +164,5 @@ int main (int argc, char **argv)
         std::cout << "I got number to be: " << number << std::endl;
         int num = atoi_practice(number.c_str());
     }
+#endif
 }

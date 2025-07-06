@@ -2,6 +2,7 @@
 
 #include <cstddef>
 
+namespace cppclass {
 class LinkedList {
 public:
         /// @brief Node definition for the linked list.
@@ -93,8 +94,23 @@ public:
          */
         size_t get_size() const;
 
+        /**
+         * @brief Returns equality between two linked lists
+         *
+         * @return true if all elements in linked list are equal to each other in order and value
+         */
+        bool operator==(const LinkedList &other) const;
+
+        /**
+         * @brief Returns non-equality between two linked lists
+         *
+         * @return false if all elements in linked list are equal to each other in order and value
+         */
+        bool operator!=(const LinkedList &other) const;
+
 private:
         Node *m_head; ///< Pointer to the first node.
         Node *m_tail; ///< Pointer to the last node.
         size_t m_size; ///< Number of elements in the list.
 };
+}
