@@ -1,0 +1,18 @@
+* commands
+** ls - list files inside a directory
+** cd - change directory
+** man - manual
+** mkdir - make directory
+** pwd - present working directory
+** rmdir - remove directory
+** vim - VI improved
+** g++ - GNU's c++ compiler
+* concepts
+** directory structure - hierarchies
+** home directory
+** tab completion
+** ~ - same as home directory
+** commands vs options vs arguments
+** parent directory (..)
+** current directory (.)
+* concepts to explain
