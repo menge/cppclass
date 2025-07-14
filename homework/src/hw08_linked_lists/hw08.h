@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstddef>
+#include "gtest/gtest_prod.h"
 
 namespace cppclass {
 class LinkedList {
@@ -112,5 +113,11 @@ private:
         Node *m_head; ///< Pointer to the first node.
         Node *m_tail; ///< Pointer to the last node.
         size_t m_size; ///< Number of elements in the list.
+
+        FRIEND_TEST(BasicLinkedListTest, DefaultConstructor);
+        FRIEND_TEST(BasicLinkedListTest, GetSizeWithMutating);
+        FRIEND_TEST(BasicLinkedListTest, HeadTailMutation);
+        FRIEND_TEST(BasicLinkedListTest, MoveConstructor);
+        FRIEND_TEST(LinkedListTest, Erase);
 };
 }
