@@ -8,6 +8,7 @@ set(SOURCE_FILES driver.cpp
                  tests_hw07.cpp
                  tests_hw08.cpp
                  tests_hw09.cpp
+                 tests_hw10.cpp
    )
 set(HW_LIBS hw01
             hw02
@@ -18,6 +19,7 @@ set(HW_LIBS hw01
             hw07
             hw08
             hw09
+            hw10
    )
 
 add_executable(test_homework ${SOURCE_FILES})
