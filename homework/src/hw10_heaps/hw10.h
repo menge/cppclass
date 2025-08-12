@@ -98,13 +98,13 @@ private:
      *
      * @param index Index of the element to move up.
      */
-    void heapify_up(const size_t &index);
+    void heapify_up(size_t index);
 
     /**
      * @brief Restores the heap property by moving the element at @p index down.
      *
      * @param index Index of the element to move down.
      */
-    void heapify_down(const size_t &index);
+    void heapify_down(size_t index);
 };
 } // namespace cppclass
