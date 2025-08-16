@@ -53,23 +53,23 @@ public:
     /**
      * @brief Peek at the root of the heap.
      *
-     * @return Returns the root of the heap.
+     * @return The root of the heap.
      */
     const T& top() const;
 
     /**
      * @brief Removes and returns the root of the heap.
      *
-     * @return Returns the root of the heap.
+     * @return The root of the heap.
      */
-    T pop_out();
+    T pop_back();
 
     /**
      * @brief Inserts @p data to the heap.
      *
      * @param data Data to insert into the heap.
      */
-    void push(const T &data);
+    void push_back(const T &data);
 
     /// @brief Returns the number of elements in the heap.
     size_t size() const;
@@ -78,7 +78,7 @@ public:
      * @brief Equality comparison.
      *
      * @param other The heap to compare with.
-     * @return true if the heaps do not differ in order or value.
+     * @return True if the heaps do not differ in order or value.
      */
     bool operator==(const Heap &other) const;
 
@@ -86,12 +86,19 @@ public:
      * @brief Inequality comparison.
      *
      * @param other The heap to compare with.
-     * @return true if the heaps differ in order or value.
+     * @return True if the heaps differ in order or value.
      */
     bool operator!=(const Heap &other) const;
 
 private:
     std::vector<T> m_arr; ///< Container to hold the heap's elements.
+
+    /**
+     * @brief Checks the validity of the heap.
+     *
+     * @return True if valid, false if invalid.
+     */
+    bool is_valid();
 
     /**
      * @brief Restores the heap property by moving the element at @p index up.
