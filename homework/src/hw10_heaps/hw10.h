@@ -62,14 +62,14 @@ public:
      *
      * @return The root of the heap.
      */
-    T pop_back();
+    T pop_top();
 
     /**
      * @brief Inserts @p data to the heap.
      *
      * @param data Data to insert into the heap.
      */
-    void push_back(const T &data);
+    void insert(const T &data);
 
     /// @brief Returns the number of elements in the heap.
     size_t size() const;
@@ -98,7 +98,7 @@ private:
      *
      * @return True if valid, false if invalid.
      */
-    bool is_valid();
+    bool is_valid() const;
 
     /**
      * @brief Restores the heap property by moving the element at @p index up.
